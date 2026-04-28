@@ -1,0 +1,155 @@
+/* === Navbar.css (Light Background Version) === */
+
+/* General Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #ffffff; /* light background */
+  border-bottom: 1px solid #e5e7eb; /* subtle border */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6b21a8; /* soft purple accent */
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #1e1f2a; /* dark text for contrast */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #6b21a8; /* purple accent on hover */
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-login,
+.btn-logout {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+  box-shadow: 0 5px 15px rgba(107,33,168,0.3);
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* === Auth Modal === */
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 33, 42, 0.7); /* semi-transparent dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.auth-modal-content {
+  background: #ffffff; /* light modal background */
+  border: 1px solid #e5e7eb;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  color: #1e1f2a;
+  position: relative;
+}
+
+.auth-modal-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #6b21a8;
+}
+
+.auth-modal-content input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  background: #f9f9fb;
+  color: #1e1f2a;
+}
+
+.auth-modal-content input::placeholder {
+  color: #6b7280;
+}
+
+.auth-modal-content button {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-modal-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.auth-modal-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1e1f2a;
+}
+
+.toggle-auth {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #6b21a8;
+  cursor: pointer;
+}

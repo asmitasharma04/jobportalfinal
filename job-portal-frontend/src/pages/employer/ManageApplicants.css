@@ -1,0 +1,199 @@
+/* === Container & Layout === */
+.manage-container {
+  min-height: 100vh;
+  background: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+  color: #1e1f2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #be9ce8, #e0d7ff);
+  z-index: -1;
+  opacity: 0.12;
+}
+
+/* === Content Box === */
+.content-box {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2rem 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* === Title === */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #6b21a8, #1e3a8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* === Table Wrapper === */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.applicants-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.applicants-table th,
+.applicants-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.applicants-table th {
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.applicants-table td {
+  text-align: center;
+}
+
+.applicants-table tr:nth-child(even) {
+  background: rgba(224, 215, 255, 0.35);
+}
+
+.applicants-table tr:hover {
+  background: rgba(224, 215, 255, 0.65);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* === No Data === */
+.no-data {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b21a8;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* === Buttons === */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+}
+
+.accept-btn {
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+}
+
+.accept-btn:hover {
+  background: linear-gradient(135deg, #1e3a8a, #6b21a8);
+  transform: scale(1.08);
+}
+
+.reject-btn {
+  background: linear-gradient(135deg, #ff3d3d, #e02d2d);
+}
+
+.reject-btn:hover {
+  transform: scale(1.08);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #6b21a8, #be9ce8);
+}
+
+.delete-btn:hover {
+  transform: scale(1.08);
+}
+
+/* === Accepted Label === */
+.accepted-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  font-weight: 500;
+  min-width: 90px;
+  margin: 0 auto;
+}
+
+/* === Links === */
+a {
+  color: #6b21a8;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+/* === Icon Styling === */
+.fas, .fa-solid {
+  font-size: 0.95rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 1.5rem 2rem;
+  }
+
+  .applicants-table th,
+  .applicants-table td {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}

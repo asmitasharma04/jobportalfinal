@@ -1,0 +1,132 @@
+/* === INTERVIEW PREP PAGE === */
+
+body {
+  background: linear-gradient(180deg, #f8f5ff 0%, #fdfcff 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.prep-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.prep-content {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  padding: 3rem 3rem 2rem;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+}
+
+.prep-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6b21a8, #9d7dfb);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  border-radius: 1rem;
+}
+
+.prep-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e1f2a;
+  margin-bottom: 0.6rem;
+}
+
+.prep-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  color: #6b21a8;
+  font-weight: 600;
+}
+
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prep-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  background: #fff;
+  color: #1e1f2a;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.prep-option:hover {
+  border-color: #9b8afc;
+  transform: translateY(-2px);
+}
+
+.prep-option.selected {
+  border-color: #6b21a8;
+  background: #f5f2ff;
+  color: #7c4dff;
+}
+
+.prep-dropdown-box {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dropdown-label {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.prep-dropdown {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #c8c8c8;
+  font-size: 1rem;
+  outline: none;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #6b21a8, #9d7dfb);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(123, 77, 255, 0.25);
+}
+
+.footer-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}

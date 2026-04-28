@@ -1,0 +1,328 @@
+/* === Main Wrapper === */
+.rb-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faf7ff 0%, #f5f3ff 100%);
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #1e1f2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Header === */
+.rb-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #6b21a8, #1e3a8a, #be9ce8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.rb-message {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* === Controls === */
+.rb-controls {
+  width: 100%;
+  max-width: 1150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(107, 33, 168, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.rb-template-select label {
+  font-weight: 600;
+  color: #1e1f2a;
+}
+
+.rb-template-select select {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: "Poppins";
+  font-size: 0.95rem;
+}
+
+.rb-download-btn,
+.rb-save-btn,
+.rb-dark-btn {
+  background: linear-gradient(to right, #6b21a8, #1e3a8a);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rb-download-btn:hover,
+.rb-save-btn:hover,
+.rb-dark-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(107, 33, 168, 0.4);
+}
+
+/* === Grid Layout === */
+.rb-grid {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Form === */
+.rb-form {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rb-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.rb-row label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.rb-row input,
+.rb-row textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-family: "Poppins";
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.rb-row input:focus,
+.rb-row textarea:focus {
+  outline: none;
+  border-color: #6b21a8;
+  box-shadow: 0 0 0 2px #be9ce8;
+}
+
+.rb-2col {
+  display: flex;
+  gap: 1rem;
+}
+
+.rb-2col > div {
+  flex: 1;
+}
+
+/* === Preview === */
+.rb-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rb-preview {
+  width: 100%;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  overflow: auto;
+  max-height: calc(100vh - 280px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rb-note {
+  text-align: center;
+  color: #6b21a8;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+/* === Classic Template === */
+.tpl-classic {
+  font-size: 0.9rem;
+  color: #1e1f2a;
+}
+
+.c-header {
+  text-align: center;
+  border-bottom: 2px solid #6b21a8;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.c-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.c-sub {
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.c-section {
+  margin-bottom: 1.2rem;
+}
+
+.c-section h3 {
+  color: #6b21a8;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.chip {
+  display: inline-block;
+  background: #f1e6ff;
+  color: #6b21a8;
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  margin: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/* === Modern Template === */
+.tpl-modern {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.tpl-modern-grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tpl-modern-sidebar {
+  flex: 0 0 220px;
+  background: #f5f3ff;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.tpl-modern-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.tpl-modern-sidebar .m-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tpl-modern-sidebar .m-contact div {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.tpl-modern-sidebar .pill-list li {
+  display: inline-block;
+  background: #e9d5ff;
+  color: #6b21a8;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+}
+
+.tpl-modern-main h3 {
+  color: #6b21a8;
+  margin-bottom: 0.3rem;
+}
+
+.tpl-modern-main section {
+  margin-bottom: 1rem;
+}
+
+.tpl-modern-main ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.tpl-modern-main p {
+  margin: 0.3rem 0;
+}
+
+/* === Dark Mode === */
+.dark .rb-wrapper {
+  background: #1e1f2a;
+  color: #f3f3f3;
+}
+
+.dark .rb-form {
+  background: #2a2b36;
+  color: #f3f3f3;
+  border: 1px solid #444;
+}
+
+.dark .rb-row input,
+.dark .rb-row textarea,
+.dark .rb-template-select select {
+  background: #1e1f2a;
+  color: #f3f3f3;
+  border: 1px solid #555;
+}
+
+.dark .rb-download-btn,
+.dark .rb-save-btn,
+.dark .rb-dark-btn {
+  background: linear-gradient(to right, #4b0082, #1e3a8a);
+}
+
+.dark .rb-preview {
+  background: #2a2b36;
+  color: #f3f3f3;
+}
+
+.dark .c-header,
+.dark .c-section h3,
+.dark .chip,
+.dark .tpl-modern-sidebar,
+.dark .tpl-modern-sidebar .m-name,
+.dark .tpl-modern-sidebar .m-contact div,
+.dark .tpl-modern-sidebar .pill-list li {
+  color: #c8a2ff;
+}
+
+.dark .tpl-modern-sidebar {
+  background: #2a2b36;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .rb-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tpl-modern-grid {
+    flex-direction: column;
+  }
+
+  .tpl-modern-sidebar {
+    width: 100%;
+    flex: none;
+    margin-bottom: 1rem;
+  }
+}

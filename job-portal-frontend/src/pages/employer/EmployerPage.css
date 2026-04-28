@@ -1,0 +1,271 @@
+/* === EmployerPage.css (Light & Contrasty Version) === */
+
+/* General Page Container */
+.page-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #fdfdfd; /* soft off-white background */
+  font-family: "Poppins", sans-serif;
+  color: #1e1f2a; /* dark text for readability */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* === Floating Background Circles === */
+.floating-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.08;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle1 { width: 300px; height: 300px; background: #6b21a8; top: 10%; left: 10%; }
+.circle2 { width: 400px; height: 400px; background: #1e3a8a; bottom: 10%; right: 10%; animation-delay: 2s; }
+.circle3 { width: 250px; height: 250px; background: #be9ce8; top: 50%; left: 60%; animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(12deg); }
+}
+
+/* === Hero Section === */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text .main-title {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-text .main-title span:first-child {
+  font-size: 2.5rem;
+  color: #1e1f2a;
+  display: block;
+}
+
+.hero-text .highlight {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #6b21a8, #1e3a8a, #be9ce8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.hero-text .subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin: 1rem 0 2rem;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+.hero-text .enter-btn {
+  padding: 12px 25px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(135deg, #6b21a8, #1e3a8a);
+  box-shadow: 0 5px 15px rgba(107,33,168,0.25);
+  color: #fff;
+}
+
+.hero-text .enter-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Features Section === */
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 2;
+  background: #f7f7f9;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  flex: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #1e1f2a;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.icon-gradient {
+  color: #6b21a8;
+}
+
+/* === Reviews Section === */
+.reviews-section {
+  padding: 60px 40px;
+  background: #ffffff;
+  text-align: center;
+  color: #1e1f2a;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6b21a8;
+}
+
+.reviews-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review-card {
+  border-radius: 20px;
+  padding: 20px 25px;
+  max-width: 250px;
+  color: #1e1f2a;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(135deg, #f0f0ff, #e0d7ff, #f0f0ff);
+  background-size: 400% 400%;
+  animation: gradientGlow 8s ease infinite;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+@keyframes gradientGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.review-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.review-card p:first-child {
+  font-size: 1.1rem;
+}
+
+/* === Companies Marquee === */
+.companies-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f5f7;
+  overflow: hidden;
+  position: relative;
+}
+
+.companies-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6b21a8;
+}
+
+.marquee {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  animation: marqueeMove 20s linear infinite;
+}
+
+@keyframes marqueeMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee img {
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.marquee img:hover {
+  transform: scale(1.15) rotate(1deg);
+  filter: drop-shadow(0 4px 12px rgba(107,33,168,0.2));
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .features-section {
+    flex-direction: column;
+  }
+
+  .reviews-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

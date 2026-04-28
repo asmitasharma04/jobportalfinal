@@ -1,0 +1,64 @@
+/* === Footer.css (Darkened for contrast) === */
+
+.footer {
+  background: #f5f5f7; /* slightly darker off-white for contrast */
+  border-top: 1px solid rgba(30, 33, 42, 0.1); /* subtle dark border */
+  padding: 40px 50px;
+  color: #1e1f2a; /* main dark text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  color: #4b5563; /* muted dark gray for copyright */
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #1e1f2a; /* dark links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #6b21a8; /* soft purple accent on hover */
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #1e1f2a; /* dark icon color */
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #6b21a8; /* purple hover */
+  transform: scale(1.1);
+}
+
+.footer-contact {
+  text-align: center;
+  color: #4b5563; /* muted dark gray */
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+}
