@@ -220,7 +220,11 @@ mongoose
 // =========================
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3002"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3002",
+      "https://jobportalfinal-cl2q.vercel.app",
+    ],
     credentials: true,
   })
 );
