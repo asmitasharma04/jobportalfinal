@@ -151,7 +151,7 @@ export default function Jobs() {
 
   const fetchJobs = async (search = "") => {
     try {
-      const res = await axios.get("http://localhost:5000/api/jobs", {
+      const res = await axios.get("https://jobportalfinal-0enc.onrender.com/api/jobs", {
         params: search ? { search } : {},
       });
       setJobs(res.data);
@@ -179,7 +179,7 @@ export default function Jobs() {
     formData.append("resume", applicant.resume);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/applications", formData);
+      const res = await axios.post("https://jobportalfinal-0enc.onrender.com/api/applications", formData);
       setApplyStatus(res.data.message);
       setShowModal(false);
     } catch (err) {

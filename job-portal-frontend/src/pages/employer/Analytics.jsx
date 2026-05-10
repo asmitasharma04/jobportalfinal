@@ -22,7 +22,7 @@ export default function Analytics() {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/analytics");
+        const res = await axios.get("https://jobportalfinal-0enc.onrender.com/api/analytics");
         setAnalytics(res.data);
       } catch (err) {
         console.error("❌ Error fetching analytics:", err);

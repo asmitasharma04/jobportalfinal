@@ -120,7 +120,7 @@ const LoginSignup = ({ role, setUser }) => {
     if (isLogin) {
       console.log("hi");
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://jobportalfinal-0enc.onrender.com/api/auth/login",
         { email: form.email, password: form.password },
         { withCredentials: true }
       );
@@ -136,7 +136,7 @@ const LoginSignup = ({ role, setUser }) => {
       setUser(user);
     } else {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://jobportalfinal-0enc.onrender.com/api/auth/signup",
         { ...form, role }
       );
       console.log("Signup Response:", res);

@@ -122,7 +122,7 @@ const PostJob = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/jobs", {
+      const res = await fetch("https://jobportalfinal-0enc.onrender.com/api/jobs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

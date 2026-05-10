@@ -147,7 +147,7 @@ export default function ManageApplicants() {
   // Fetch all applicants
   const fetchApplicants = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/applications");
+      const res = await axios.get("https://jobportalfinal-0enc.onrender.com/api/applications");
       setApplicants(res.data || []);
     } catch (err) {
       console.error("❌ Error fetching applicants:", err);
@@ -163,7 +163,7 @@ export default function ManageApplicants() {
   const handleStatusChange = async (id, status) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/applications/${id}/status`,
+        `https://jobportalfinal-0enc.onrender.com/api/applications/${id}/status`,
         { status }
       );
 
@@ -183,7 +183,7 @@ export default function ManageApplicants() {
   // Handle delete applicant
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/applications/${id}`);
+      await axios.delete(`https://jobportalfinal-0enc.onrender.com/api/applications/${id}`);
 
       // Remove from state
       setApplicants((prev) => prev.filter((app) => app.id !== id));
@@ -222,7 +222,7 @@ export default function ManageApplicants() {
                     <td>
                       {app.resumeFilename ? (
                         <a
-                          href={`http://localhost:5000/api/applications/resume/${app.resumeId}`}
+                          href={`https://jobportalfinal-0enc.onrender.com/api/applications/resume/${app.resumeId}`}
                           target="_blank"
                           rel="noreferrer"
                         >

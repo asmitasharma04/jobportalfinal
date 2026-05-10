@@ -89,7 +89,7 @@ export default function ResumeBuilder() {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/api/resumes", payload, {
+      const res = await axios.post("https://jobportalfinal-0enc.onrender.com/api/resumes", payload, {
         headers: { "Content-Type": "application/json" },
       });
       if (res.status === 201 || res.status === 200) {

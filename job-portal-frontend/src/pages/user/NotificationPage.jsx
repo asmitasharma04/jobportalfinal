@@ -288,7 +288,7 @@ export default function NotificationPage() {
 
     const fetchNotifications = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/notifications/${userId}`);
+        const res = await axios.get(`https://jobportalfinal-0enc.onrender.com/api/notifications/${userId}`);
         setNotifications(res.data);
       } catch (err) {
         console.error("❌ Error fetching notifications:", err);
@@ -303,7 +303,7 @@ export default function NotificationPage() {
 
   const markAsRead = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/notifications/${id}/read`);
+      await axios.put(`https://jobportalfinal-0enc.onrender.com/api/notifications/${id}/read`);
       setNotifications((prev) =>
         prev.map((n) => (n._id === id ? { ...n, isRead: true } : n))
       );

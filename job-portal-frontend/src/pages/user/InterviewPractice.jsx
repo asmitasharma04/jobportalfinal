@@ -211,7 +211,7 @@ const InterviewPractice = () => {
         setLoading(true);
 
         const res = await axios.get(
-          `http://localhost:5000/api/questions/${category}?count=5&t=${Date.now()}`
+          `https://jobportalfinal-0enc.onrender.com/api/questions/${category}?count=5&t=${Date.now()}`
         );
 
         setQuestions(res.data);
@@ -256,7 +256,7 @@ const InterviewPractice = () => {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/scores", scoreData);
+      await axios.post("https://jobportalfinal-0enc.onrender.com/api/scores", scoreData);
     } catch (err) {
       console.error("Error saving score:", err);
     }
