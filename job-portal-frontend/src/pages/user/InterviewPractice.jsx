@@ -191,7 +191,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { Timer, Brain, CheckCircle, Trophy, Clock } from "lucide-react";
+import { Brain, CheckCircle, Trophy, Clock } from "lucide-react";
 import "./InterviewPractice.css";
 
 const InterviewPractice = () => {
@@ -205,7 +205,8 @@ const InterviewPractice = () => {
   const [loading, setLoading] = useState(true);
 
   // ✅ Fetch AI-generated questions from Gemini backend
-  useEffect(() => {
+ /* eslint-disable react-hooks/exhaustive-deps */
+useEffect(() => {
     const fetchQuestions = async () => {
       try {
         setLoading(true);
