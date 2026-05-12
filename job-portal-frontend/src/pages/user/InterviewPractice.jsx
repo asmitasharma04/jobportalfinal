@@ -56,6 +56,7 @@ const InterviewPractice = () => {
   const [loading, setLoading] = useState(true);
 
   // Fetch AI questions
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
@@ -116,6 +117,7 @@ const InterviewPractice = () => {
   };
 
   // Timer
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     if (loading) return;
     if (score !== null) return;
